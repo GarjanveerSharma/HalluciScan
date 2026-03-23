@@ -1,0 +1,154 @@
+/* HalluciScan Extension - Floating Panel Styles */
+
+#halluciscan-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 360px;
+  max-height: 500px;
+  background: rgba(15, 15, 25, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(139, 92, 246, 0.1);
+  z-index: 2147483647;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  color: #e2e8f0;
+  overflow: hidden;
+  animation: hs-slide-in 0.3s ease-out;
+}
+
+@keyframes hs-slide-in {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.hs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.hs-logo {
+  font-weight: 700;
+  font-size: 14px;
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hs-close-btn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+}
+
+.hs-close-btn:hover { color: #fff; }
+
+.hs-content {
+  padding: 16px;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.hs-loading {
+  text-align: center;
+  color: #9ca3af;
+  padding: 30px 0;
+  font-size: 13px;
+}
+
+.hs-loading::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(139, 92, 246, 0.2);
+  border-top-color: #8b5cf6;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  animation: hs-spin 0.8s linear infinite;
+}
+
+@keyframes hs-spin {
+  to { transform: rotate(360deg); }
+}
+
+.hs-error {
+  text-align: center;
+  color: #ef4444;
+  padding: 20px 0;
+  font-size: 13px;
+}
+
+.hs-score-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.hs-score-ring {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 4px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hs-score-num {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.hs-score-label {
+  font-size: 12px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hs-risk {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.hs-claims-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
+  margin-bottom: 8px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hs-claim {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.hs-badge {
+  font-weight: 700;
+  font-size: 11px;
+  flex-shrink: 0;
+}
