@@ -1,6 +1,6 @@
-## 🧠 What is HalluciScan?
+## 🧠 What is Ghost?
 
-**HalluciScan** is an AI-powered hallucination detection tool that analyzes AI-generated content and identifies factual errors, unsupported claims, and hallucinations in real-time. Paste any AI response and let HalluciScan verify it using Google Gemini and Groq's LLaMA models.
+**Ghost** is an AI-powered hallucination detection tool that analyzes AI-generated content and identifies factual errors, unsupported claims, and hallucinations in real-time. Paste any AI response and let HalluciScan verify it using Google Gemini and Groq's LLaMA models.
 
 ---
 
