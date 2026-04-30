@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>HalluciScan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-width: 320px;
+      width: 100%;
+      background: #090b14;
+      color: #e2e8f0;
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      padding: 18px;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(139, 92, 246, 0.18), transparent 20%),
+                  radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.12), transparent 25%);
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      border-radius: 24px;
+      background: rgba(10, 12, 20, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+      padding: 22px;
+      overflow: hidden;
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .logo {
+      font-size: 18px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .badge {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      background: rgba(59, 130, 246, 0.14);
+      color: #cbd5e1;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(59, 130, 246, 0.18);
+    }
+    .subtitle {
+      color: #9ca3af;
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .status-grid {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .status-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 14px 16px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .status-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.08);
+    }
+    .status-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .status-label {
+      font-size: 12px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-right: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .dot-active { background: #10b981; }
+    .dot-beta { background: #f59e0b; }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 14px 16px;
+      border: none;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 18px 50px rgba(59, 130, 246, 0.22);
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+    }
+    .version {
+      text-align: center;
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <div>
+        <div class="logo">🛡️ HalluciScan</div>
+        <div class="subtitle">AI hallucination detection for ChatGPT, Gemini, and Claude.</div>
+      </div>
+      <span class="badge">Live</span>
+    </div>
+
+    <div class="status-grid">
+      <div class="status-card">
+        <div>
+          <span class="status-dot dot-active"></span>
+          <span class="status-name">ChatGPT</span>
+        </div>
+        <span class="status-label">Connected</span>
+      </div>
+      <div class="status-card">
+        <div>
+          <span class="status-dot dot-active"></span>
+          <span class="status-name">Gemini</span>
+        </div>
+        <span class="status-label">Connected</span>
+      </div>
+      <div class="status-card">
+        <div>
+          <span class="status-dot dot-beta"></span>
+          <span class="status-name">Claude</span>
+        </div>
+        <span class="status-label">Beta</span>
+      </div>
+    </div>
+
+    <a href="http://localhost:3000/analyzer" target="_blank" class="btn">Open Web Analyzer</a>
+    <div class="version" id="version-text">v1.0.0</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

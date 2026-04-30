@@ -1,0 +1,22 @@
+﻿
+> halluciscan@0.1.0 lint
+> eslint
+
+
+C:\Users\deepanshu\Desktop\HalluciScan\halluciscan\app\analyzer\page.tsx
+  13:26  warning  'text' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\deepanshu\Desktop\HalluciScan\halluciscan\app\layout.tsx
+  19:9  warning  Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+
+C:\Users\deepanshu\Desktop\HalluciScan\halluciscan\app\login\page.tsx
+  61:22  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\deepanshu\Desktop\HalluciScan\halluciscan\components\Hero.tsx
+  3:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\deepanshu\Desktop\HalluciScan\halluciscan\components\UploadPDF.tsx
+  11:10  warning  'selectedFile' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 5 problems (1 error, 4 warnings)
+
